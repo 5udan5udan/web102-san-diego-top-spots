@@ -1,14 +1,53 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>San Diego Top Spots</title>
+
+  <!-- 1. Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  />
+
+  <!-- 2. Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <!-- position map container so it is visible on screen -->
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 25px;
+    }
+  </style>
 </head>
+<body class="container py-4">
+  <h1 class="mb-4">San Diego Top Spots</h1>
+  <div id="map"></div>
 
-<body>
-    <!-- Write your markup here -->
+  <!-- Main table displaying all spots -->
+  <table class="table table-striped table-bordered align-middle">
+    <thead class="table-light">
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Distance</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody id="top-spots-table"></tbody>
+  </table>
 
-    <!-- Don't forget to add your <script> tag here -->
+  <!-- jQuery gives us $.getJSON -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Leaflet library to create the map and pins -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="main.js"></script>
 </body>
-
 </html>

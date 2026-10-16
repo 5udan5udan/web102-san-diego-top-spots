@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "scripts": {
         "test": "npx playwright test",
+        "start": "node-static . -p 8888",
         "postinstall": "npx playwright install"
     },
     "devDependencies": {
